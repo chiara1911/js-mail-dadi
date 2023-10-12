@@ -15,23 +15,27 @@ const account = [
 const alertEl = document.querySelector('.alert')
 
 const button = document.querySelector('.btn-success');
-button.addEventListener('click', function (){
+button.addEventListener('click', function () {
 
     const email = document.getElementById('mail').value;
+    let flag = false;
 
     for (let email = 0; email <= account.length - 1; email++) {
-         let currentMail = account;
-        if (email === currentMail) {
-            text = 'ok';
-        } else {
-           text  = 'no';
+        let currentMail = account[email];
+        if (account[email] === currentMail) {       
+            flag = true;                
         }
+        
+        if (flag) {
+            text = 'ciao';
+        } else {
+            text = 'via';
+    }
+    console.log(currentMail);
+    // console.log(alertEl);
+    alertEl.innerHTML = text;
 
-        console.log(currentMail);
-        // console.log(alertEl);
-        alertEl.innerHTML = text;
 
     }
-
-
-});
+}
+)
