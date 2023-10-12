@@ -6,23 +6,34 @@ const account = [
     'chiaracesari89@gmail.com',
     'bean@bean.com',
     'pippo@pippo.com'
-    ];
+];
 
- console.log(account);
+// console.log(account);
 
 
-const email = document.getElementById ('mail');
-console.log(mail);
+
+const alertEl = document.querySelector('.alert')
 
 const button = document.querySelector('.btn-success');
-button.addEventListener ('click', function(){
-   
-    
-   
-for (let email = 0; email <= account.length -1; email++){
-    let accountEl = account[email];
-console.log(accountEl);
-}
+button.addEventListener('click', function () {
+
+    const email = document.getElementById('mail').value;
+
+    for (let email = 0; email <= account.length - 1; email++) {
+        let currentMail = account[email];
+       let accountEl = document.createElement('div');
+        if (currentMail === email) {
+            text = 'ok';
+        } else {
+           text  = 'no';
+        }
+
+        alertEl.append(accountEl);
+        accountEl.innerHTML = text;
+
+        console.log(accountEl);
+
+    }
 
 
 });
