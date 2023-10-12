@@ -21,17 +21,13 @@ button.addEventListener('click', function () {
 
     for (let email = 0; email <= account.length - 1; email++) {
         let currentMail = account[email];
-       let accountEl = document.createElement('div');
         if (currentMail === email) {
             text = 'ok';
         } else {
            text  = 'no';
         }
-
-        alertEl.append(accountEl);
-        accountEl.innerHTML = text;
-
-        console.log(accountEl);
+        console.log(alertEl);
+        alertEl.innerHTML = text;
 
     }
 
