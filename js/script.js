@@ -52,9 +52,9 @@ risultato.innerHTML = text;
 box_player.innerHTML = dadiPlayer;
 box_cpu.innerHTML = dadiCpu;
 
-    console.log(dadiPlayer);
-    console.log(dadiCpu);
-    console.log(text);
+    // console.log(dadiPlayer);
+    // console.log(dadiCpu);
+    // console.log(text);
     
 })
 
